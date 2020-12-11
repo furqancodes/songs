@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
-import App from './components/App'
-import combinereducers from './reducers'
-
+import App from "./components/App";
+import combineReducers from "./reducers";
 
 ReactDOM.render(
-    <Provider store ={createStore(combinereducers)}><App/></Provider>,
-    document.querySelector('#root')
-    )
+  <Provider store={createStore(combineReducers)}>
+    <App />
+  </Provider>,
+  document.querySelector("#root")
+);
